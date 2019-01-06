@@ -1,0 +1,10 @@
+; adding 3 numbers 
+LDA 4001H
+MOV B,A
+LDA 4002H
+ADD B
+MOV B,A
+LDA 4003H
+ADD B
+STA 4006H
+HLT

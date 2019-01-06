@@ -1,0 +1,19 @@
+LXI H,2000H
+MVI B,04H
+MVI C,00H
+
+L1: MOV A,M
+MOV D,A
+ANI 01H
+JNZ LO  ; ODD NO  
+MOV A,D
+ADD C
+MOV C,A
+LO: INX H
+	DCR B
+    JNZ L1
+    
+    MOV A,C
+    STA 2010H
+    
+    HLT

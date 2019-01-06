@@ -1,0 +1,23 @@
+; linear search in array
+
+LDA 2000H
+MOV B,A
+LXI H , 2001H
+
+MVI D,05H
+
+LOOP1: MOV A , M
+
+CMP B 
+JZ STOP
+
+INX H
+DCR D
+JNZ LOOP1
+
+MVI A,00H
+HLT
+
+STOP: MVI A,01H
+STA 2008H
+HLT

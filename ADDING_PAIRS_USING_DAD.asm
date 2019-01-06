@@ -1,0 +1,7 @@
+; adding 2 16 bit numbers  using DAD D 
+LHLD 2000H
+XCHG
+LHLD 2002H
+DAD D
+SHLD 2006H
+HLT

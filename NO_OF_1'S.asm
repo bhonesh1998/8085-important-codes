@@ -1,0 +1,13 @@
+; count no of one's
+
+MVI B, 00
+MVI C, 08
+MVI A, 07 
+BACK: RAR
+JNC SKIP
+INR B
+SKIP: DCR C
+JNZ BACK
+MOV A,B
+STA 2002H
+HLT 

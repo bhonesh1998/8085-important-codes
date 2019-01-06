@@ -1,0 +1,7 @@
+; subtracting 2 numbers 
+LDA 4001H
+MOV B,A
+LDA 4002H
+SUB B
+STA 4003H
+HLT

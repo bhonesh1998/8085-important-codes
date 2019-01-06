@@ -1,0 +1,13 @@
+; PROGRAM TO GET SUM OF FIRST N NATURAL NUMBERS 
+MVI A,09H   ;  A=09H
+MOV B,A     ;  B=A
+MVI A,00H   ;  A=00H
+
+LO: ADD B   ;  A=A+B
+DCR B       ;  D--
+
+JNZ LO      ;  IF(Z!=0) THEN JUMP ON LO 
+
+STA 2000H   ; RESULT OF ACC ON 2000H
+HLT         ; STOP 
+

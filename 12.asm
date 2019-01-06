@@ -1,0 +1,20 @@
+; multiply 2 numbers 
+
+LDA 2004H
+MOV C,A
+LDA 2005H
+MOV D,A
+
+MVI A,00H
+LOOP1: ADD D
+
+JNC LOOP2
+
+LOOP2: DCR C
+JNZ LOOP1
+
+STA 2006H
+
+
+
+HLT

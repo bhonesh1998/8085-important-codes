@@ -1,0 +1,16 @@
+MVI A,00H
+STA 2000H
+MVI A,01H
+STA 2001H
+MVI B,08H
+LXI H,2000H
+LOOP: MOV A,M; A=M; A=00H
+    INX H;HL++
+    ADD M;A=A+M; A=01H
+    INX H ; HL++
+    MOV M,A ; M=A ; M[2002H]=01H
+    DCX H
+    DCR B ; B--
+    JNZ LOOP ; IF(Z!=0) THEN JUMP TO LOOP
+    HLT  ;STOP
+
